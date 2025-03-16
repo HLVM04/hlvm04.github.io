@@ -1,6 +1,6 @@
 ---
-title: The Gauntlet Pt. 2
-date: 2025-03-16 00:00 +/-TTTT
+title: The Gauntlet Pt. 2 🥈
+date: 2025-03-17 00:51 +/-TTTT
 categories: [CTF Writeups, DDC25]
 tags: [DDC, Boot2Root, Web Exploitation] 
 media_subpath: /assets/img/TheGauntlet
@@ -8,6 +8,9 @@ media_subpath: /assets/img/TheGauntlet
 
 {: .prompt-info } 
 > This challenge is a continuation of the previous challenge [The Gauntlet Pt. 1]({% post_url 2025-03-17-The Gauntlet 1%})
+
+{: .prompt-warning } 
+> This writeup is WIP and may be incomplete.
 
 
 ## 🗒️ Challenge description
@@ -50,7 +53,7 @@ $ cat /home/user2/.ssh/id_rsa
 
 Now we can successfully connect to user2 with SSH. Which gives us a much nicer shell. Now running `sudo -l` reveals that we can run `/usr/bin/runMe.sh' as `user3` without a password. We can delete the original write-protected `runMe.sh` and replace it with a malicious script that gives us a shell as `user3`.
 
-```
+```bash
 $ rm -f /home/user2/runMe.sh
 $ echo '/bin/sh' > runMe.sh
 $ chmod +x runMe.sh

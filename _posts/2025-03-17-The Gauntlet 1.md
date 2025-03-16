@@ -1,6 +1,6 @@
 ---
-title: The Gauntlet Pt. 1
-date: 2025-03-16 00:00 +/-TTTT
+title: The Gauntlet Pt. 1 🥇
+date: 2025-03-17 00:01 +/-TTTT
 categories: [CTF Writeups, DDC25]
 tags: [DDC, Boot2Root, Web Exploitation] 
 media_subpath: /assets/img/TheGauntlet
