@@ -5,6 +5,8 @@
 @use '../themes/light';
 @use '../themes/dark';
 
+@import url('https://tetunori.github.io/fluent-emoji-webfont/dist/FluentEmojiColor.css');
+
 :root {
   font-size: 16px;
   --transition-duration: 0.25s; // Define transition duration as a variable
