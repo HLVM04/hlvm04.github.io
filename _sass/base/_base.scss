@@ -7,9 +7,14 @@
 
 :root {
   font-size: 16px;
+  --transition-duration: 0.25s; // Define transition duration as a variable
+  --transition-style: ease-in-out; // Define transition style as a variable
 }
 
 html {
+  // Add transition property to html
+  transition: background-color var(--transition-duration) var(--transition-style);
+  
   @media (prefers-color-scheme: light) {
     &:not([data-mode]),
     &[data-mode='light'] {
@@ -44,6 +49,10 @@ body {
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   font-family: v.$font-family-base;
+  
+  // Add transition for smooth theme changing
+  transition: background-color var(--transition-duration) var(--transition-style),
+              color var(--transition-duration) var(--transition-style);
 }
 
 h1.dynamic-title {
@@ -95,6 +104,8 @@ main {
   border: 0;
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
+  transition: background-color var(--transition-duration) var(--transition-style), 
+              box-shadow var(--transition-duration) var(--transition-style);
 
   &::before {
     @extend %rounded;
@@ -105,7 +116,7 @@ main {
     position: absolute;
     background-color: var(--card-hovor-bg);
     opacity: 0;
-    transition: opacity 0.35s ease-in-out;
+    transition: opacity var(--transition-duration) var(--transition-style);
   }
 
   &:hover {
@@ -139,6 +150,8 @@ main {
   }
 
   a {
+    // transition: color var(--transition-duration) var(--transition-style);
+
     &.popup {
       @extend %no-cursor;
       @extend %img-caption;
@@ -390,15 +403,20 @@ mjx-container {
 
 @media (hover: hover) {
   #sidebar ul > li:last-child::after {
-    transition: top 0.5s ease;
+    transition: top var(--transition-duration) var(--transition-style);
   }
 
   .nav-link {
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color var(--transition-duration) var(--transition-style), color var(--transition-duration) var(--transition-style);
   }
 
   .post-preview {
-    transition: background-color 0.35s ease-in-out;
+    transition: background-color var(--transition-duration) var(--transition-style), box-shadow var(--transition-duration) var(--transition-style);
+  }
+  
+  // Add this for sidebar transition
+  #sidebar {
+    transition: background-color var(--transition-duration) var(--transition-style), border-right-color var(--transition-duration) var(--transition-style);
   }
 }
 

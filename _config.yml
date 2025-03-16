@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: HLVM
-  email: example@domain.com # change to your email address
+  email: contact@hlvm.dk # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/HLVM7 # change to your Twitter homepage
@@ -163,7 +163,7 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: false
+      line_numbers: true
       start_line: 1
 
 collections:

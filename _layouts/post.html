@@ -160,7 +160,7 @@ script_includes:
       "
     >
       <div class="license-wrapper">
-        {% if site.data.locales[lang].copyright.license.template %}
+        <!-- {% if site.data.locales[lang].copyright.license.template %} DISABLED
           {% capture _replacement %}
         <a href="{{ site.data.locales[lang].copyright.license.link }}">
           {{ site.data.locales[lang].copyright.license.name }}
@@ -168,7 +168,7 @@ script_includes:
         {% endcapture %}
 
           {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
-        {% endif %}
+        {% endif %} -->
       </div>
 
       {% include post-sharing.html lang=lang %}
