@@ -2,7 +2,8 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+enabled: false
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+Hello, you found my secret about me page!
+I don't know anything about myself, sorry.
