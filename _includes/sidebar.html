@@ -27,7 +27,6 @@
       </li>
       <!-- the real tabs -->
       {% for tab in site.tabs %}
-        {% if tab.enabled %}
         <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
@@ -37,7 +36,6 @@
           </a>
         </li>
         <!-- .nav-item -->
-        {% endif %}
       {% endfor %}
     </ul>
   </nav>
