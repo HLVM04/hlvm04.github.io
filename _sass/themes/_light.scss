@@ -1,4 +1,11 @@
 @mixin styles {
+  /* Azure blue accent colors */
+  --azure-blue: rgb(0, 127, 255);
+  --azure-blue-light: rgb(77, 166, 255);
+  --azure-blue-dark: rgb(0, 90, 181);
+  --azure-blue-muted: rgb(51, 122, 183);
+  --azure-blue-pale: rgba(0, 127, 255, 0.1);
+
   /* Framework color */
   --main-bg: white;
   --mask-bg: #c1c3c5;
@@ -10,16 +17,16 @@
   --text-muted-highlight-color: inherit;
   --heading-color: #2a2a2a;
   --label-color: #585858;
-  --blockquote-border-color: #eeeeee;
+  --blockquote-border-color: var(--azure-blue-pale);
   --blockquote-text-color: #757575;
-  --link-color: #0056b2;
-  --link-underline-color: #dee2e6;
+  --link-color: var(--azure-blue-dark);
+  --link-underline-color: var(--azure-blue-pale);
   --button-bg: #ffffff;
-  --btn-border-color: #e9ecef;
-  --btn-backtotop-color: #686868;
+  --btn-border-color: var(--azure-blue-pale);
+  --btn-backtotop-color: var(--azure-blue-muted);
   --btn-backtotop-border-color: #f1f1f1;
   --checkbox-color: #c5c5c5;
-  --checkbox-checked-color: #07a8f7;
+  --checkbox-checked-color: var(--azure-blue);
   --img-bg: radial-gradient(
     circle,
     rgb(255, 255, 255) 0%,
@@ -33,81 +40,81 @@
   );
 
   /* Sidebar */
-  --site-title-color: rgb(113, 113, 113);
-  --site-subtitle-color: #717171;
+  --site-title-color: var(--azure-blue);
+  --site-subtitle-color: var(--azure-blue-dark);
   --sidebar-bg: #f6f8fa;
   --sidebar-border-color: #efefef;
   --sidebar-muted-color: #545454;
-  --sidebar-active-color: #1d1d1d;
-  --sidebar-hover-bg: rgb(223, 233, 241, 0.64);
+  --sidebar-active-color: var(--azure-blue);
+  --sidebar-hover-bg: rgba(0, 127, 255, 0.1);
   --sidebar-btn-bg: white;
-  --sidebar-btn-color: #8e8e8e;
-  --avatar-border-color: white;
+  --sidebar-btn-color: var(--azure-blue);
+  --avatar-border-color: var(--azure-blue-pale);
 
   /* Topbar */
   --topbar-bg: rgb(255, 255, 255, 0.7);
   --topbar-text-color: rgb(78, 78, 78);
   --search-border-color: rgb(240, 240, 240);
-  --search-icon-color: #c2c6cc;
-  --input-focus-border-color: #b8b8b8;
+  --search-icon-color: var(--azure-blue-muted);
+  --input-focus-border-color: var(--azure-blue-light);
 
   /* Home page */
   --post-list-text-color: dimgray;
-  --btn-patinator-text-color: #555555;
+  --btn-patinator-text-color: var(--azure-blue-dark);
   --btn-paginator-hover-color: var(--sidebar-bg);
 
   /* Posts */
-  --toc-highlight: #0550ae;
+  --toc-highlight: var(--azure-blue);
   --toc-popup-border-color: lightgray;
-  --btn-share-color: gray;
-  --btn-share-hover-color: #0d6efd;
+  --btn-share-color: var(--azure-blue-muted);
+  --btn-share-hover-color: var(--azure-blue);
   --card-bg: white;
-  --card-hovor-bg: #e2e2e2;
+  --card-hovor-bg: var(--azure-blue-pale);
   --card-shadow: rgb(104, 104, 104, 0.05) 0 2px 6px 0,
     rgba(211, 209, 209, 0.15) 0 0 0 1px;
-  --footnote-target-bg: lightcyan;
+  --footnote-target-bg: var(--azure-blue-pale);
   --tb-odd-bg: #fbfcfd;
   --tb-border-color: #eaeaea;
-  --dash-color: silver;
+  --dash-color: var(--azure-blue-muted);
   --kbd-wrap-color: #bdbdbd;
   --kbd-text-color: var(--text-color);
   --kbd-bg-color: white;
   --prompt-text-color: rgb(46, 46, 46, 0.77);
   --prompt-tip-bg: rgb(123, 247, 144, 0.2);
   --prompt-tip-icon-color: #03b303;
-  --prompt-info-bg: #e1f5fe;
-  --prompt-info-icon-color: #0070cb;
+  --prompt-info-bg: rgba(0, 127, 255, 0.1);
+  --prompt-info-icon-color: var(--azure-blue);
   --prompt-warning-bg: rgb(255, 243, 205);
   --prompt-warning-icon-color: #ef9c03;
   --prompt-danger-bg: rgb(248, 215, 218, 0.56);
   --prompt-danger-icon-color: #df3c30;
 
   /* Tags */
-  --tag-border: #dee2e6;
+  --tag-border: var(--azure-blue-pale);
   --tag-shadow: var(--btn-border-color);
-  --tag-hover: rgb(222, 226, 230);
+  --tag-hover: var(--azure-blue-pale);
   --search-tag-bg: #f8f9fa;
 
   /* Categories */
   --categories-border: rgba(0, 0, 0, 0.125);
-  --categories-hover-bg: var(--btn-border-color);
-  --categories-icon-hover-color: darkslategray;
+  --categories-hover-bg: var(--azure-blue-pale);
+  --categories-icon-hover-color: var(--azure-blue);
 
   /* Archive */
   --timeline-color: rgba(0, 0, 0, 0.075);
-  --timeline-node-bg: #c2c6cc;
+  --timeline-node-bg: var(--azure-blue-muted);
   --timeline-year-dot-color: #ffffff;
 
   /* --- Custom code light mode colors --- */
   --language-border-color: #ececec;
   --highlight-bg-color: #f6f8fa;
-  --highlighter-rouge-color: #3f596f;
+  --highlighter-rouge-color: var(--azure-blue-dark);
   --highlight-lineno-color: #9e9e9e;
-  --inline-code-bg: rgba(25, 25, 28, 0.05);
+  --inline-code-bg: var(--azure-blue-pale);
   --code-color: #3a3a3a;
   --code-header-text-color: #a3a3a3;
   --code-header-muted-color: #e5e5e5;
-  --code-header-icon-color: #c9c8c8;
+  --code-header-icon-color: var(--azure-blue-muted);
   --clipboard-checked-color: #43c743;
 
   [class^='prompt-'] {
@@ -187,7 +194,7 @@
   }
 
   .highlight .kc {
-    color: #0550ae;
+    color: var(--azure-blue);
   }
 
   .highlight .l,
@@ -200,27 +207,27 @@
   .highlight .il,
   .highlight .mo,
   .highlight .mx {
-    color: #0550ae;
+    color: var(--azure-blue);
   }
 
   .highlight .sb {
-    color: #0550ae;
+    color: var(--azure-blue);
   }
 
   .highlight .bp {
-    color: #0550ae;
+    color: var(--azure-blue);
   }
 
   .highlight .ne {
-    color: #0550ae;
+    color: var(--azure-blue);
   }
 
   .highlight .nl {
-    color: #0550ae;
+    color: var(--azure-blue);
   }
 
   .highlight .py {
-    color: #0550ae;
+    color: var(--azure-blue);
   }
 
   .highlight .nv,
@@ -228,21 +235,21 @@
   .highlight .vg,
   .highlight .vi,
   .highlight .vm {
-    color: #0550ae;
+    color: var(--azure-blue);
   }
 
   .highlight .o,
   .highlight .ow {
-    color: #0550ae;
+    color: var(--azure-blue);
   }
 
   .highlight .gh {
-    color: #0550ae;
+    color: var(--azure-blue);
     font-weight: bold;
   }
 
   .highlight .gu {
-    color: #0550ae;
+    color: var(--azure-blue);
     font-weight: bold;
   }
 
@@ -257,7 +264,7 @@
   .highlight .sx,
   .highlight .s1,
   .highlight .ss {
-    color: #0a3069;
+    color: var(--azure-blue-dark);
   }
 
   .highlight .nd {

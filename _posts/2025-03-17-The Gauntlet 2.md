@@ -51,7 +51,7 @@ $ cat ~/.ssh/id_rsa.pub > /home/user2/.ssh/authorized_keys
 $ cat /home/user2/.ssh/id_rsa
 ```
 
-Now we can successfully connect to user2 with SSH. Which gives us a much nicer shell. Now running `sudo -l` reveals that we can run `/usr/bin/runMe.sh' as `user3` without a password. We can delete the original write-protected `runMe.sh` and replace it with a malicious script that gives us a shell as `user3`.
+Now we can successfully connect to user2 with SSH. Which gives us a much nicer shell. Now running `sudo -l` reveals that we can run `/usr/bin/runMe.sh` as `user3` without a password. We can delete the original write-protected `runMe.sh` and replace it with a malicious script that gives us a shell as `user3`.
 
 ```bash
 $ rm -f /home/user2/runMe.sh

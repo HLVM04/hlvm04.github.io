@@ -63,7 +63,7 @@ Upon further trial and error, we find that `&`, `|`, `;`, and `&&` are all block
 
 We can use the `$(command)` syntax to execute commands. This syntax is not blocked by the filter. We can use this to execute the command `$(whoami)`, which gives us `user1` in the output, awesome! We have (cursed) command injecion! 🎉
 
-Now we just need to somehow create a reverse shell. But looking at [revshells.com](https://www.revshells.com/), we see that all the reverse shells require the use of illegal characters. The biggest problem is the lack of spaces. But there is a shell trick that allows us to bypass this limitation: the `IFS` variable. Typing `${IFS}` is equivalent to typing a space. 
+Now we just need to somehow create a reverse shell. But looking at [revshells.com](https://www.revshells.com/){:target="_blank"}, we see that all the reverse shells require the use of illegal characters. The biggest problem is the lack of spaces. But there is a shell trick that allows us to bypass this limitation: the `IFS` variable. Typing `${IFS}` is equivalent to typing a space. 
 
 Create a reverse shell is still very tricky with the limited characters we have. We can potentially use a python reverse shell, and encode it in base64 to avoid using illegal characters. We can then decode the base64 on the server side.
 
