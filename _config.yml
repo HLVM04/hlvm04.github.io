@@ -38,7 +38,6 @@ social:
   email: contact@hlvm.dk # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://hlvm.bsky.social
     - https://github.com/HLVM04 # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username

@@ -5,7 +5,7 @@
 
 - type: bluesky
   icon: "fa-brands fa-bluesky"
-  url: 'https://hlvm.bsky.social'
+  url: 'https://bsky.app/profile/hlvm.dk'
 
 - type: email
   icon: "fas fa-envelope"
