@@ -1,10 +1,10 @@
 @mixin styles {
   /* Azure blue accent colors */
-  --azure-blue: rgb(0, 127, 255);
-  --azure-blue-light: rgb(77, 166, 255);
-  --azure-blue-dark: rgb(0, 90, 181);
-  --azure-blue-muted: rgb(51, 122, 183);
-  --azure-blue-pale: rgba(0, 127, 255, 0.1);
+  --azure-blue: rgb(0 127 255);
+  --azure-blue-light: rgb(77 166 255);
+  --azure-blue-dark: rgb(0 90 181);
+  --azure-blue-muted: rgb(51 122 183);
+  --azure-blue-pale: rgb(0 127 255 / 10%);
 
   /* Framework color */
   --main-bg: white;
@@ -29,14 +29,14 @@
   --checkbox-checked-color: var(--azure-blue);
   --img-bg: radial-gradient(
     circle,
-    rgb(255, 255, 255) 0%,
-    rgb(239, 239, 239) 100%
+    rgb(255 255 255) 0%,
+    rgb(239 239 239) 100%
   );
   --shimmer-bg: linear-gradient(
     90deg,
-    rgba(250, 250, 250, 0) 0%,
-    rgba(232, 230, 230, 1) 50%,
-    rgba(250, 250, 250, 0) 100%
+    rgb(250 250 250 / 0%) 0%,
+    rgb(232 230 230 / 100%) 50%,
+    rgb(250 250 250 / 0%) 100%
   );
 
   /* Sidebar */
@@ -46,15 +46,15 @@
   --sidebar-border-color: #efefef;
   --sidebar-muted-color: #545454;
   --sidebar-active-color: var(--azure-blue);
-  --sidebar-hover-bg: rgba(0, 127, 255, 0.1);
+  --sidebar-hover-bg: rgb(0 127 255 / 10%);
   --sidebar-btn-bg: white;
   --sidebar-btn-color: var(--azure-blue);
   --avatar-border-color: var(--azure-blue-pale);
 
   /* Topbar */
-  --topbar-bg: rgb(255, 255, 255, 0.7);
-  --topbar-text-color: rgb(78, 78, 78);
-  --search-border-color: rgb(240, 240, 240);
+  --topbar-bg: rgb(255 255 255 / 70%);
+  --topbar-text-color: rgb(78 78 78);
+  --search-border-color: rgb(240 240 240);
   --search-icon-color: var(--azure-blue-muted);
   --input-focus-border-color: var(--azure-blue-light);
 
@@ -69,9 +69,9 @@
   --btn-share-color: var(--azure-blue-muted);
   --btn-share-hover-color: var(--azure-blue);
   --card-bg: white;
-  --card-hovor-bg: var(--azure-blue-pale);
-  --card-shadow: rgb(104, 104, 104, 0.05) 0 2px 6px 0,
-    rgba(211, 209, 209, 0.15) 0 0 0 1px;
+  --card-hover-bg: var(--azure-blue-pale);
+  --card-shadow: rgb(104 104 104 / 5%) 0 2px 6px 0,
+    rgb(211 209 209 / 15%) 0 0 0 1px;
   --footnote-target-bg: var(--azure-blue-pale);
   --tb-odd-bg: #fbfcfd;
   --tb-border-color: #eaeaea;
@@ -79,14 +79,14 @@
   --kbd-wrap-color: #bdbdbd;
   --kbd-text-color: var(--text-color);
   --kbd-bg-color: white;
-  --prompt-text-color: rgb(46, 46, 46, 0.77);
-  --prompt-tip-bg: rgb(123, 247, 144, 0.2);
+  --prompt-text-color: rgb(46 46 46 / 77%);
+  --prompt-tip-bg: rgb(123 247 144 / 20%);
   --prompt-tip-icon-color: #03b303;
-  --prompt-info-bg: rgba(0, 127, 255, 0.1);
+  --prompt-info-bg: rgb(0 127 255 / 10%);
   --prompt-info-icon-color: var(--azure-blue);
-  --prompt-warning-bg: rgb(255, 243, 205);
+  --prompt-warning-bg: rgb(255 243 205);
   --prompt-warning-icon-color: #ef9c03;
-  --prompt-danger-bg: rgb(248, 215, 218, 0.56);
+  --prompt-danger-bg: rgb(248 215 218 / 56%);
   --prompt-danger-icon-color: #df3c30;
 
   /* Tags */
@@ -96,12 +96,12 @@
   --search-tag-bg: #f8f9fa;
 
   /* Categories */
-  --categories-border: rgba(0, 0, 0, 0.125);
+  --categories-border: rgb(0 0 0 / 12.5%);
   --categories-hover-bg: var(--azure-blue-pale);
   --categories-icon-hover-color: var(--azure-blue);
 
   /* Archive */
-  --timeline-color: rgba(0, 0, 0, 0.075);
+  --timeline-color: rgb(0 0 0 / 7.5%);
   --timeline-node-bg: var(--azure-blue-muted);
   --timeline-year-dot-color: #ffffff;
 
@@ -118,7 +118,7 @@
   --clipboard-checked-color: #43c743;
 
   [class^='prompt-'] {
-    --link-underline-color: rgb(219, 216, 216);
+    --link-underline-color: rgb(219 216 216);
   }
 
   .dark {

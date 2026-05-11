@@ -4,11 +4,11 @@
 @use '../abstracts/placeholders';
 @use '../themes/light';
 @use '../themes/dark';
-
-@import url('https://tetunori.github.io/fluent-emoji-webfont/dist/FluentEmojiColor.css');
+@import 'https://tetunori.github.io/fluent-emoji-webfont/dist/FluentEmojiColor.css';
 
 :root {
   font-size: 16px;
+
   --transition-duration: 0.25s; // Define transition duration as a variable
   --transition-style: ease-in-out; // Define transition style as a variable
 }
@@ -116,7 +116,7 @@ main {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: var(--card-hovor-bg);
+    background-color: var(--card-hover-bg);
     opacity: 0;
     transition: opacity var(--transition-duration) var(--transition-style);
   }
@@ -329,7 +329,14 @@ main {
 
 .embed-audio {
   width: 100%;
-  display: block;
+
+  &.file {
+    display: block;
+  }
+
+  &.spotify {
+    border-radius: 14px;
+  }
 
   @extend %img-caption;
 }
@@ -364,7 +371,7 @@ main {
 }
 
 .disabled {
-  color: rgb(206, 196, 196);
+  color: rgb(206 196 196);
   pointer-events: auto;
   cursor: not-allowed;
 }
