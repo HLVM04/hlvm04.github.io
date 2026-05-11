@@ -6,6 +6,9 @@ categories: [CTF Writeups, DDC]
 tags: [DDC, Web Exploitation, Python, Flask, Jinja2, SSTI]
 ---
 
+{: .prompt-info }
+> This challenge was solved by a human 🤓
+
 ## 🗒️ Challenge Description
 
 > So you think you know everything about python SSTI? We'll see about that!

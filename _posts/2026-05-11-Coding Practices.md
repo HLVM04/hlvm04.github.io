@@ -6,6 +6,10 @@ categories: [CTF Writeups, DDC]
 tags: [DDC, Web Exploitation, Python, Pickle, Deserialization]
 ---
 
+{: .prompt-info }
+> This challenge was solved by a human 🤓
+
+
 ## 🗒️ Challenge Description
 
 > Enjoy my little online python editor. You can write your code with syntax highlighting and save it for later. Of course, you cant run your code on my machine :)
