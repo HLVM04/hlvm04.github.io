@@ -39,19 +39,22 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(
-        keyList.map((key) => {
-          if (purge) {
-            return caches.delete(key);
-          } else {
-            if (key !== swconf.cacheName) {
+    caches
+      .keys()
+      .then((keyList) => {
+        return Promise.all(
+          keyList.map((key) => {
+            if (purge) {
               return caches.delete(key);
+            } else {
+              if (key !== swconf.cacheName) {
+                return caches.delete(key);
+              }
             }
-          }
-        })
-      );
-    })
+          })
+        );
+      })
+      .then(() => self.clients.claim())
   );
 });
 
@@ -63,6 +66,29 @@ self.addEventListener('message', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.headers.has('range')) {
+    return;
+  }
+
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (!purge && verifyUrl(event.request.url)) {
+            const responseToCache = response.clone();
+
+            caches.open(swconf.cacheName).then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+          }
+
+          return response;
+        })
+        .catch(() =>
+          caches.match(event.request).then((response) => {
+            return response || caches.match('/');
+          })
+        )
+    );
     return;
   }
 
