@@ -10,10 +10,14 @@ search {
   background: var(--main-bg);
   padding: 0 0.5rem;
 
+  @extend %theme-color-transition;
+
   i {
     z-index: 2;
     font-size: 0.9rem;
     color: var(--search-icon-color);
+
+    @extend %theme-color-transition;
   }
 
   @include bp.lt(bp.get(lg)) {
@@ -134,6 +138,7 @@ search {
   white-space: nowrap;
 
   @extend %cursor-pointer;
+  @extend %theme-color-transition;
 }
 
 #search-input {
@@ -143,6 +148,8 @@ search {
   padding: 0.18rem 0.3rem;
   color: var(--text-color);
   height: auto;
+
+  @extend %theme-color-transition;
 
   &:focus {
     box-shadow: none;
@@ -177,8 +184,11 @@ search {
       content: '#';
       color: var(--text-muted-color);
       padding-right: 0.2rem;
+
+      @extend %theme-color-transition;
     }
 
     @extend %link-color;
+    @extend %theme-color-transition;
   }
 }

@@ -252,6 +252,8 @@ main {
   color: var(--text-muted-color);
   line-height: 1.3rem;
 
+  @extend %theme-color-transition;
+
   &:not(:last-child) {
     margin-right: 0.2rem;
   }

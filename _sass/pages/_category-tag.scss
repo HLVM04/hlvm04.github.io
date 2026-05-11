@@ -5,6 +5,8 @@
 .dash {
   margin: 0 0.5rem 0.6rem 0.5rem;
   border-bottom: 2px dotted var(--dash-color);
+
+  @extend %theme-border-transition;
 }
 
 #page-category,

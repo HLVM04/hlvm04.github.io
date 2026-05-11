@@ -7,6 +7,8 @@
   color: var(--highlighter-rouge-color);
   margin-top: 0.5rem;
   margin-bottom: 1.2em; /* Override BS Inline-code style */
+
+  @extend %theme-color-transition;
 }
 
 .highlight {
@@ -15,6 +17,8 @@
 
   overflow: auto;
   padding-bottom: 0.75rem;
+
+  @extend %theme-color-transition;
 
   @at-root figure#{&} {
     @extend %code-snippet-bg;
@@ -54,6 +58,13 @@
     -ms-user-select: none;
     user-select: none;
   }
+
+  span[class] {
+    transition:
+      background-color var(--transition-duration) var(--transition-style),
+      color var(--transition-duration) var(--transition-style);
+    transition-delay: 0s;
+  }
 } /* .highlight */
 
 code {
@@ -62,12 +73,16 @@ code {
   hyphens: none;
   color: var(--code-color);
 
+  @extend %theme-color-transition;
+
   &.highlighter-rouge {
     font-size: v.$code-font-size;
     padding: 3px 5px;
     overflow-wrap: break-word;
     border-radius: v.$radius-sm;
     background-color: var(--inline-code-bg);
+
+    @extend %theme-color-transition;
   }
 
   &.filepath {
@@ -111,6 +126,8 @@ div[class^='language-'] {
 
   box-shadow: var(--language-border-color) 0 0 0 1px;
 
+  @extend %theme-color-transition;
+
   .content > & {
     @include mx.ml-mr(-1rem);
 
@@ -142,6 +159,9 @@ div[class^='language-'] {
             var(--code-header-muted-color),
           (v.$code-dot-size + v.$code-dot-gap) * 2 0 0
             var(--code-header-muted-color);
+        transition:
+          background-color var(--transition-duration) var(--transition-style),
+          box-shadow var(--transition-duration) var(--transition-style);
       }
 
       span {
@@ -184,6 +204,8 @@ div {
   margin-left: 0.75rem;
   margin-right: 0.25rem;
 
+  @extend %theme-color-transition;
+
   /* the label block */
   span {
     line-height: v.$code-header-height;
@@ -193,6 +215,8 @@ div {
       font-size: 1rem;
       width: v.$code-icon-width;
       color: var(--code-header-icon-color);
+
+      @extend %theme-color-transition;
 
       &.small {
         font-size: 70%;
@@ -210,6 +234,8 @@ div {
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--code-header-text-color);
+
+      @extend %theme-color-transition;
     }
   }
 
@@ -224,8 +250,12 @@ div {
     padding: 0;
     background-color: inherit;
 
+    @extend %theme-color-transition;
+
     i {
       color: var(--code-header-icon-color);
+
+      @extend %theme-color-transition;
     }
 
     &[timeout] {

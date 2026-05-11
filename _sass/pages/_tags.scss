@@ -1,4 +1,5 @@
 @use '../abstracts/breakpoints' as bp;
+@use '../abstracts/placeholders';
 
 .tag {
   border-radius: 0.7em;
@@ -8,6 +9,8 @@
   letter-spacing: 0;
   border: 1px solid var(--tag-border) !important;
   box-shadow: 0 0 3px 0 var(--tag-shadow);
+
+  @extend %theme-color-transition;
 
   span {
     margin-left: 0.6em;

@@ -58,6 +58,8 @@ blockquote {
   color: var(--blockquote-text-color);
   margin-top: 0.5rem;
 
+  @extend %theme-color-transition;
+
   > p:last-child {
     margin-bottom: 0;
   }
@@ -101,11 +103,15 @@ kbd {
   border-radius: v.$radius-sm;
   border: solid 1px var(--kbd-wrap-color);
   box-shadow: inset 0 -2px 0 var(--kbd-wrap-color);
+
+  @extend %theme-color-transition;
 }
 
 hr {
   border-color: var(--main-border-color);
   opacity: 1;
+
+  @extend %theme-border-transition;
 }
 
 footer {
@@ -114,6 +120,7 @@ footer {
   border-top: 1px solid var(--main-border-color);
 
   @extend %text-xs;
+  @extend %theme-color-transition;
 
   a {
     @extend %text-highlight;
@@ -246,6 +253,8 @@ main {
     tbody {
       tr {
         border-bottom: 1px solid var(--tb-border-color);
+
+        @extend %theme-color-transition;
 
         &:nth-child(2n) {
           background-color: var(--tb-even-bg);

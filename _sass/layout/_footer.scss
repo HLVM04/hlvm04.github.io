@@ -9,6 +9,7 @@ footer {
   border-top: 1px solid var(--main-border-color);
 
   @extend %text-xs;
+  @extend %theme-border-transition;
 
   @include bp.lt(bp.get(lg)) {
     @include mx.slide;
