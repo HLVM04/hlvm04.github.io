@@ -1,13 +1,10 @@
 ---
 title: Greetings 🐍
-description: A Python/Jinja2 SSTI challenge using SandboxedEnvironment.
+description: A Python/Jinja2 SSTI challenge using SandboxedEnvironment and CVE-2025-27516.
 date: 2026-05-11 00:00 +/-TTTT
 categories: [CTF Writeups, DDC]
 tags: [DDC, Web Exploitation, Python, Flask, Jinja2, SSTI]
 ---
-
-{: .prompt-warning }
-> This writeup is WIP and may be incomplete.
 
 ## 🗒️ Challenge Description
 
